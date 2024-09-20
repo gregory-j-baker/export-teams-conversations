@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Chat Export</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-message {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .chat-message:last-child {
+            border-bottom: none;
+        }
+        .sender {
+            font-weight: bold;
+            color: #2b5797;
+        }
+        .timestamp {
+            font-size: 12px;
+            color: #888;
+        }
+        .message-content {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-message">
+            <div class="sender">John Doe</div>
+            <div class="timestamp">Friday, September 20, 2024, 01:45 PM</div>
+            <div class="message-content"><p>Hello team, just checking in!</p></div>
+        </div>
+        <div class="chat-message">
+            <div class="sender">Jane Smith</div>
+            <div class="timestamp">Friday, September 20, 2024, 02:12 PM</div>
+            <div class="message-content"><p>We have a meeting at 3 PM today. Please be prepared.</p></div>
+        </div>
+    </div>
+
+</body>
+</html>

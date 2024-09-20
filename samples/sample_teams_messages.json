@@ -1,0 +1,33 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#chats('19%3Ameeting_NjgxMjA0MGUtZmRiYy00MjY2LTlkYWMtOWJmYmEzYTA3YWZi%40thread.v2')/messages",
+    "value": [
+        {
+            "id": "message1",
+            "createdDateTime": "2024-09-20T13:45:30Z",
+            "from": {
+                "user": {
+                    "id": "user1",
+                    "displayName": "John Doe"
+                }
+            },
+            "body": {
+                "contentType": "html",
+                "content": "<p>Hello team, just checking in!</p>"
+            }
+        },
+        {
+            "id": "message2",
+            "createdDateTime": "2024-09-20T14:12:10Z",
+            "from": {
+                "user": {
+                    "id": "user2",
+                    "displayName": "Jane Smith"
+                }
+            },
+            "body": {
+                "contentType": "html",
+                "content": "<p>We have a meeting at 3 PM today. Please be prepared.</p>"
+            }
+        }
+    ]
+}

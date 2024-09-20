@@ -25,9 +25,11 @@ The two PowerShell scripts in this repository serve the following purposes:
 1. Clone this repository or download the script file.
 2. Run the PowerShell script with the following parameters:
    ```bash
-   ./Get-TeamsChatMessagesWithToken.ps1 -Token <YourAccessToken> -OutputPath <PathToSaveJson>
+   ./Get-TeamsChatMessagesWithToken.ps1 -ChatId <YourChatId> -AccessToken <YourAccessToken> -OutputFilePath <PathToSaveJson>
    ```
 3. This script will authenticate using the provided token and export Teams messages into a JSON file at the specified path.
+   
+   You can obtain the access token by logging in to [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) with your Microsoft tenant credentials. After logging in, select the necessary permissions (such as `Chat.Read`), and generate the token.
 
 ### 2. Convert Teams Messages to HTML
 
@@ -44,7 +46,7 @@ The two PowerShell scripts in this repository serve the following purposes:
 
 ```bash
 # Step 1: Export Teams Messages to JSON
-./Get-TeamsChatMessagesWithToken.ps1 -Token "eyJ..." -OutputPath "./teamsMessages.json"
+./Get-TeamsChatMessagesWithToken.ps1 -ChatId "19:meeting_NjgxMjA0MGUtZmRiYy00MjY2LTlkYWMtOWJmYmEzYTA3YWZi@thread.v2" -AccessToken "eyJ..." -OutputFilePath "./teamsMessages.json"
 
 # Step 2: Convert JSON to HTML
 ./Convert-TeamsMessagesToHtml.ps1 -JsonPath "./teamsMessages.json" -HtmlOutputPath "./teamsMessages.html"
@@ -52,7 +54,14 @@ The two PowerShell scripts in this repository serve the following purposes:
 
 ## Token Generation
 
-To use the `Get-TeamsChatMessagesWithToken.ps1` script, you'll need an access token for Microsoft Teams. This can be obtained through Azure AD by registering an app and getting appropriate permissions to access the Microsoft Graph API. Detailed instructions can be found [here](https://docs.microsoft.com/en-us/graph/auth-v2-service).
+To use the `Get-TeamsChatMessagesWithToken.ps1` script, you'll need an access token for Microsoft Teams. This can be obtained through Azure AD or by logging in to [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer). Select the required permissions (e.g., `Chat.Read`), authenticate, and copy the generated token to use in the script.
+
+## Sample Files
+
+- [Sample Teams Messages JSON](samples/sample_teams_messages.json)
+- [Sample Teams Messages HTML](samples/sample_teams_messages.html)
+
+These sample files give an idea of the expected results when using the provided scripts to export Teams messages and convert them to HTML.
 
 ## License
 
